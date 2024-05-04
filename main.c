@@ -181,7 +181,7 @@ int main(int argc, char *argv[])
         weAlreadyWentThroughThisCell[i][n+4-2]=true;
     }
     weAlreadyWentThroughThisCell[currentLocation[0]][currentLocation[1]] = true;
-    while(i<n*n){
+    while(i<n*n){ // O(9^(n^2)) since we can choose from 0 to 9 and then we can make this selection n^2 times
             S[i]++;
             printSOfI(S,n);
             jump(S[i],currentLocation);
